@@ -1,0 +1,314 @@
+@import "mixin";
+@import "header";
+@import "footer";
+
+.container {
+    @include container;
+}
+
+.omOss__image {
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 100% 100%;
+    height: 35vw;
+    width:100%;
+    margin-bottom: 45px;
+}
+
+
+.omOss-about__inner {
+    text-align: center;
+}
+
+.omOss-about__title {
+    font: 700 56px/67px $robotoFont;
+    color: $yellowColor;
+    margin-bottom: 45px;
+    @media(max-width:960px) {
+        font: 700 40px/45px $robotoFont;
+
+    }
+    @media(max-width:550px) {
+        font: 700 24px/32px $robotoFont;
+    }
+}
+
+.omOss-about__text {
+    max-width: 1364px;
+    width: 100%;
+    margin:0 auto 50px;
+    font: 500 32px/38px $robotoFont;
+    color: $blackFontColor;
+    @media(max-width:960px) {
+        font: 500 24px/32px $robotoFont;
+        margin-bottom: 90px;
+
+    }
+
+    @media(max-width:550px) {
+        font: 500 16px/24px $robotoFont;
+    
+    }
+
+    &--small {
+        max-width: 1034px;
+    }
+}
+
+.omOss__texts {
+    background-color: #000000;
+    text-align: center;
+    color:#ffffff;
+}
+
+
+.omOss__texts-container {
+    max-width: 1374px;
+    width: 100%;
+    padding:0 25px;
+    margin:0 auto;
+}
+
+.omOss__texts__inner {
+    padding:87px 0 98px;
+}
+
+.omOss__texts-title {
+    font: 700 56px/67px $robotoFont;
+    margin:0 auto;
+    text-transform: uppercase;
+    margin-bottom: 60px;
+    @media(max-width:960px) {
+        font: 700 40px/56px $robotoFont;
+    }
+    @media(max-width:760px) {
+        font: 700 32px/38px $robotoFont;
+    }
+    @media(max-width:550px) {
+        font: 700 20px/32px $robotoFont;
+    }
+}
+
+.omOss__texts-text {
+    font: 500 24px/29px $robotoFont;
+    text-align: left;
+    margin-bottom: 45px;
+    @media(max-width:760px) {
+        font: 500 20px/24px $robotoFont;
+    }
+    @media(max-width:480px) {
+        font: 500 16px/18px $robotoFont;
+    }
+}
+.omOss__texts__list-container {
+    display: flex;
+    justify-content: space-between;
+    @media(max-width:960px) {
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+    }
+    
+}
+
+.omOss__texts-list {
+    text-align: left;
+    max-width: 400px;
+    width: 100%;
+}
+
+.omOss__texts-element {
+    font: 500 32px/48px $robotoFont;
+    color: #FFFFFF;
+    padding-left:25px;
+    position: relative;
+    margin-bottom: 12px;
+    margin-right: 15px;
+
+    &:before {
+        content: '';
+        position: absolute;
+        height: 14px;
+        width: 14px;
+        top:16px;
+        left: 0;
+        background-color: $yellowColor;
+    }
+    @media(max-width:480px) {
+    font: 500 24px/32px $robotoFont;
+
+    }
+}
+.omOss__description {
+    padding:100px 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center center;
+}
+.omOss-description__inner {
+    padding:240px 138px;
+    width: 100%;
+    
+    background-color: rgba(232, 188, 32, 0.8);
+    @media(max-width:760px) {
+        padding:150px 138px;
+    }
+    @media(max-width:550px) {
+        padding:75px 40px;
+    }
+}
+
+.omOss-description__text {
+    text-align: center;
+    font: 500 32px/47px $robotoFont;
+    color: #ffffff;
+    letter-spacing: 0px;
+    max-width: 862px;
+    width: 100%;
+    margin:0 auto;
+    @media(max-width:960px) {
+        font: 500 24px/32px $robotoFont;
+    }
+    @media(max-width:660px) {
+        font: 500 18px/24px $robotoFont;
+    }
+}
+
+.omOss-hvor-container {
+    max-width: 1372px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 25px;
+}
+
+.omOss-hvor__inner {
+    padding:88px 0;
+    text-align: center;
+}
+
+.omOss-hvor__title {
+    font:700 53px/67px $robotoFont;
+    color:$blackFontColor;
+    text-align: center;
+    margin-bottom: 136px;
+    width: 100%;
+    text-transform: uppercase;
+    @media(max-width:760px) {
+        font: 700 32px/38px $robotoFont;
+    }
+    @media(max-width:550px) {
+        font: 700 24px/32px $robotoFont;
+        margin-bottom: 75px;
+
+    }
+
+}
+
+.omOss-hvor__blocks {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 110px;
+    text-align: left;
+    @media(max-width:650px) {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+}
+.omOss-hvor__block {
+    max-width: 627px;
+    width: 100%;
+    margin-right: 25px;
+}
+
+.omOss-hvor__text {
+    margin-bottom: 20px;
+    font:  500 20px/26px $robotoFont;
+    @media(max-width:550px) {
+    font:  500 16px/18px $robotoFont;
+        
+    }
+}
+
+.omOss-hvor__list-title {
+    font: 700 20px/24px $robotoFont;
+    color:$blackFontColor;
+
+    margin-bottom: 20px;
+    @media(max-width:550px) {
+        font:  500 16px/18px $robotoFont; 
+    }
+    
+}
+
+.omOss-hvor__element {
+    padding-left: 30px;
+    font: 500 20px/24px $robotoFont;
+    color:$blackFontColor;
+
+    margin-bottom: 10px;
+    position: relative;
+
+    &:first-child {
+        &::before {
+            content: '';
+            position: absolute;
+            top:10px;
+            left: 0;
+            height: 14px;
+            width: 14px;
+            background-color: $yellowColor;
+        }
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        top:4px;
+        left: 0;
+        height: 14px;
+        width: 14px;
+        background-color: $yellowColor;
+    }
+    @media(max-width:550px) {
+        font:  500 16px/18px $robotoFont;
+    }
+}
+
+.omOss-hover__title-2 {
+    font: 700 36px/54px $robotoFont;
+    color:$blackFontColor;
+    margin-bottom: 64px;
+
+    @media(max-width:960px) {
+        font: 700 24px/32px $robotoFont;
+    }
+    @media(max-width:550px) {
+        font: 700 18px/24px $robotoFont;
+        text-align: left;
+    }
+}
+
+.omOss-hover__btn {
+    font: 700 24px/29px $robotoFont;
+    color:$blackFontColor;
+    text-align: center;
+    border:1px solid #000000;
+    padding:26px 100px;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+        border:1px solid #ffffff;
+        background-color: #000000;
+        color:#ffffff
+    }
+
+    @media(max-width:550px) {
+        padding:13px 45px;
+        font: 700 18px/24px $robotoFont;
+
+    }
+}

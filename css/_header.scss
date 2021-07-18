@@ -1,0 +1,116 @@
+@import "mixin";
+
+.header {
+    background-color: #E8BC20;
+}
+
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+
+}
+
+
+.header__list {
+    display: flex;
+    align-items: center;
+    @media(max-width:690px) {
+        position: absolute;
+        display: block;
+        top: 0;
+        right: 0;
+        left: 0;
+        margin-top: 50px;
+        background: rgba(218, 218, 218, 0.7);
+        z-index: 1000;
+        overflow: auto;
+        opacity: 0;
+        top:-1100px;
+        transition: all 0.3s ease-in-out;
+        &.active-header{
+            top:35px;
+            opacity: 1;
+
+        .header__list-element {
+            margin-left:0 ;
+            color:#ffffff;
+
+            &:hover {
+                .header__list-link {
+                    color:#000000;
+
+                }
+            }
+        }
+
+        }
+    }
+
+}
+
+.header__list-link {
+  color:#ffffff;
+  transition: all 0.3s ease-in-out;
+    &:hover {
+        color:#000000;
+    }
+}
+
+.header__list-link.chosen {
+    color:#000000;
+}
+
+.header__list-element {
+    cursor: pointer;
+    font: 700 20px/24px $robotoFont;
+    &+.header__list-element {
+        margin-left:114px;
+        @media(max-width:850px) {
+            margin-left:57px;
+        }
+    }
+    @media(max-width:690px) {
+        display: block;
+        padding:35px 0;
+        text-align: center;
+        color:#000000;
+    }
+}
+
+// Burger Menu
+.icon {
+    display: none;
+    width: 45px;
+    height: 35px;
+    position: relative;
+    cursor: pointer;
+    z-index: 150;
+
+    span {
+        display: block;
+        position: absolute;
+        height: 3px;
+        width: 100%;
+        background: #000000;
+        border-radius: 9px;
+        left:0;
+        transition: rotate(0deg);
+        transition: all 0.25s ease-in-out;
+
+        &:nth-child(1){
+            top:0;
+        }
+        &:nth-child(2),&:nth-child(3){
+            top:13px;
+        }
+        &:nth-child(4){
+            top:26px;
+        }
+    }
+
+    @media(max-width:690px) {
+        display: inline-block;
+    }
+}

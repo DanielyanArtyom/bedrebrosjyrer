@@ -1,0 +1,125 @@
+@import "mixin";
+@import "header";
+@import "footer";
+
+.container {
+    @include container;
+}
+
+.blog__image {
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 100% 100%;
+    height: 35vw;
+    width:100%;
+    margin-bottom: 88px;
+}
+
+.blog__title {
+    font: 700 56px/67px $robotoFont;  
+    text-align: center;  
+    color: $yellowColor;
+    margin-bottom: 70px;
+    @media(max-width:960px) {
+        font: 700 42px/67px $robotoFont;  
+    }
+    @media(max-width:550px) {
+        font: 700 24px/32px $robotoFont;  
+    }
+}
+
+.blog-container__inner {
+    height: 100vh;
+    min-height: 500px;
+    overflow: auto;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 80px;
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* IE 10+ */
+
+    &::-webkit-scrollbar {
+        width: 0px;
+        background: transparent;
+        /* make scrollbar transparent */
+    }
+    @media(max-width:756px) {
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    
+}
+
+.blog__block-1,.blog__block-2,.blog__block-3 {
+    margin-right: 15px;
+
+}
+// .blog__block-2 {
+//    @media(max-width:960px) {
+//     order:3
+//    }
+// }
+
+.blog__block {
+    max-width: 476px;
+    width: 100%;
+    margin-bottom: 48px;
+  
+}
+
+.blog__block--long {
+    max-width: 587px;
+    width: 100%;
+    margin-right: 15px;
+    @media(max-width:756px) {
+        max-width: 476px;
+        width: 100%;
+    }
+
+}
+
+.block__img {
+    overflow: hidden;
+    margin-bottom: 25px;
+
+    &--inner {
+        width: 100%;
+        transition: all 0.3s ease-in-out;
+        &:hover {
+            transform:scale(1.5)
+        }
+    }
+}
+
+.block__title {
+    font: 500 32px/38px $robotoFont;
+    color:$blackFontColor;
+    padding:10px 0;
+    border-top:2px solid #151516;
+    border-bottom:2px solid #151516;
+    margin-bottom: 20px;
+    @media(max-width:960px) {
+        font: 500 24px/32px $robotoFont;
+    }
+}
+
+.block__text {
+    font: 400 20px/30px $robotoFont;
+    color: $blackFontColor;
+    margin-bottom: 8px;
+    @media(max-width:960px) {
+        font: 400 18px/24px $robotoFont;
+    }
+}
+
+.block__day {
+    font: 400 20px/30px $robotoFont;
+    color: #15151673;
+    @media(max-width:960px) {
+        font: 400 18px/24px $robotoFont;
+    }
+}
